@@ -1021,7 +1021,8 @@ func (s *Session) NewTreeDisconnectReq(treeId uint32) (TreeDisconnectReq, error)
 func (s *Session) NewLogoffReq() (LogoffReq, error) {
 	
         header := newHeader()
-	header.Command = CommandLogoff
+	
+        header.Command = CommandLogoff
 	header.CreditCharge = 1
 	header.MessageID = s.messageID
 	header.SessionID = s.sessionID
